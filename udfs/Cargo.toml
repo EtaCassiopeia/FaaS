@@ -1,0 +1,11 @@
+[package]
+name = "udfs"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "add"
+crate-type = ["cdylib"]
+path = "src/add.rs"
+
+[dependencies]

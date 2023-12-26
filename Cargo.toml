@@ -1,0 +1,32 @@
+[package]
+name = "FaaS"
+version = "0.1.0"
+edition = "2021"
+authors = ["Mohsen Zainalpour <zainalpour@gamil.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# Asynchronous runtime
+tokio = { version = "1", features = ["full"] }
+
+# Web frameworks
+actix-web = "4"
+
+# HTTP and multipart handling
+actix-multipart = "0.6"
+reqwest = { version = "0.11", features = ["blocking","stream","multipart","json"] }
+
+# Utilities
+futures = { version = "0.3", default-features = false }
+bytes = "1.0"
+futures-util = "0.3"
+tokio-util = { version = "0.7", features = ["codec"] }
+sanitize-filename = "0.5"
+
+# Error handling
+anyhow = "1.0"
+
+# Dynamic library loading
+libloading = "0.8"
+
